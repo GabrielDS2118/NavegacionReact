@@ -1,0 +1,48 @@
+SSR vs SPA  
+    SSR: 
+        Desde el backend(servidor) se envia todo el html listo
+        Al navegar(por ejemplo por el menu): 
+            Links 
+            Nueva solicitud al backend a una nueva ruta
+            Se vuelve a renderizar otro html completamente distinto
+        
+        Ventajas:
+            Carga inicial rápida
+        
+        Desventajas:
+            Al hacer cualquier navegacion,
+            Se hace una nueva consulta al backend el cual genera un nuevo html que el clienta renderiza
+            Se puede quedar en blanco debido al internet
+    
+    SPA:
+        Utilizan:
+            Client Side Rendering
+            Client Side Routing
+
+        El backend responde con un html básico y un javascript
+        El javascript hace peticiones al backend para traer la información y renderizarla
+        Comunicación bidireccional
+
+        Al navegar:
+            Desde el cliente no dedesde el backend 
+            El mismo html vacio ya no tiene etiquetas links, 
+            Se actualiza dinamicamente el contenido por medio de peticiones al backend(API REST)
+            Mientras hace ese proceso de consulta al backend hacemos un loading visual(Cargando ....)
+        
+        Ventajas:
+            Navegacion más rápida
+            Si se va al internet no se queda en blanco
+
+        Desventajas:
+            Primera carga lenta
+
+    FUSION:(Progresive Server Side Rendering)
+        
+        Hidratacion en React
+        Generar desde el backend el primer html listo
+        Primera carga rápida
+        Descargar ese html inicial
+        Y después de eso transformar en SPA
+    
+
+        
